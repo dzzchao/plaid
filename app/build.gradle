@@ -15,7 +15,6 @@
  */
 
 apply plugin: 'com.android.application'
-apply plugin: 'io.fabric'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
@@ -30,7 +29,7 @@ android {
         applicationId names.applicationId
         minSdkVersion versions.minSdk
         targetSdkVersion versions.targetSdk
-        versionCode rootProject.gitCommitCount
+        versionCode 100
         versionName = '1.1.0'
         archivesBaseName = 'plaid'
 
@@ -90,4 +89,4 @@ dependencies {
 }
 
 // Must be applied after dependencies. See https://stackoverflow.com/a/38018985
-apply plugin: 'com.google.gms.google-services'
+

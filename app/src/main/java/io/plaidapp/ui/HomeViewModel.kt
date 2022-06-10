@@ -197,12 +197,8 @@ class HomeViewModel(
             positions.add(i)
         }
 
-        val scrollToPosition = positions.max()
-        return if (scrollToPosition == null) {
-            null
-        } else {
-            SourcesHighlightUiModel(positions, scrollToPosition)
-        }
+        val scrollToPosition = positions.maxOrNull() ?: 0
+        return SourcesHighlightUiModel(positions, scrollToPosition)
     }
 
     private fun updateFeedData(oldItems: List<PlaidItem>, newItems: List<PlaidItem>) {
